@@ -14,7 +14,7 @@ class WeatherCardField extends Component {
 
   render() {
     return this.props.data.map(el => (
-      <div key={el.id} className="row" style={this.rowStyle()}>
+      <div key={el.id} className="row card-group" style={this.rowStyle()}>
         <WeatherCard data={el}  viewDrill={this.props.viewDrill} />
       </div>
     ));

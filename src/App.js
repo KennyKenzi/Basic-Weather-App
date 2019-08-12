@@ -36,7 +36,7 @@ class App extends Component {
         id: 1,
         day: "Today",
         date: data[0].dt_txt.slice(0, 11),
-        time: data[0].dt_txt.slice(12),
+        time: data[0].dt_txt.slice(11),
         highTemp: data[0].main.temp_max,
         lowTemp: data[0].main.temp_min,
         icon: "http://openweathermap.org/img/wn/" + data[0].weather[0].icon + "@2x.png",
@@ -46,7 +46,7 @@ class App extends Component {
         id: 2,
         day: "Tomorrow",
         date: data[8].dt_txt.slice(0, 11),
-        time: data[0].dt_txt.slice(12),
+        time: data[0].dt_txt.slice(11),
         highTemp: data[8].main.temp_max,
         lowTemp: data[8].main.temp_min,
         icon: "http://openweathermap.org/img/wn/" + data[8].weather[0].icon + "@2x.png",
@@ -56,7 +56,7 @@ class App extends Component {
         id: 3,
         day: "Day 3",
         date: data[16].dt_txt.slice(0, 11),
-        time: data[0].dt_txt.slice(12),
+        time: data[0].dt_txt.slice(11),
         highTemp: data[16].main.temp_max,
         lowTemp: data[16].main.temp_min,
         icon: "http://openweathermap.org/img/wn/" + data[16].weather[0].icon + "@2x.png",
@@ -66,7 +66,7 @@ class App extends Component {
         id: 4,
         day: "Day 4",
         date: data[24].dt_txt.slice(0, 11),
-        time: data[0].dt_txt.slice(12),
+        time: data[0].dt_txt.slice(11),
         highTemp: data[24].main.temp_max,
         lowTemp: data[24].main.temp_min,
         icon: "http://openweathermap.org/img/wn/" + data[24].weather[0].icon + "@2x.png",
@@ -76,14 +76,14 @@ class App extends Component {
         id: 5,
         day: "Day 5",
         date: data[32].dt_txt.slice(0, 11),
-        time: data[0].dt_txt.slice(12),
+        time: data[0].dt_txt.slice(11),
         highTemp: data[32].main.temp_max,
         lowTemp: data[32].main.temp_min,
         icon: "http://openweathermap.org/img/wn/" + data[32].weather[0].icon + "@2x.png",
         description: data[32].weather[0].description 
       }
     ];
-    console.log(newarr)
+    // console.log(newarr)
     this.setState({ days: newarr, loading: this.hidingLoading() });
   };
 
@@ -95,7 +95,7 @@ class App extends Component {
   drillStyle() {
     return {
       background: "linear-gradient(to bottom right, #00ffff 30%, #2F4F4F 80%)",
-      margin: "20px",
+      margin: "none",
       display: "inline-flex"
     };
   }
@@ -129,6 +129,7 @@ class App extends Component {
   };
 
   render() {
+
     return (
       <div className="App">
         <div className="Container-Fluid" style={this.appStyle()}>

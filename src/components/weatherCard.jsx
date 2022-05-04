@@ -6,8 +6,8 @@ class WeatherCard extends Component {
 
   cardStyle = () => {
     return {
-      border: "2px solid white",
-      padding: "10px"
+      border: "none",
+      // padding: "10px"
     };
   };
   imageStyle = () => {
@@ -22,7 +22,7 @@ class WeatherCard extends Component {
     const {date, highTemp, lowTemp, day, time, icon, description} = this.props.data
    
     return (
-      <div className="card col-sm=12 col-md=4 col-lg=2" style={this.cardStyle()}>
+      <div className="card" style={this.cardStyle()}>
         <img
           className="card-img-top"
           style={this.imageStyle()}

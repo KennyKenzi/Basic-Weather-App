@@ -8,17 +8,15 @@ class DrillDown extends Component {
 
     drillStyle=()=>{
       return{
-        display:'-webkit-box'
+        // display:'-webkit-box'
       }
     }
 
 
-
     render() { 
-
             return this.props.drillData.map((el)=>( 
-                <span className="row card-group" style={this.drillStyle()}>
-                  <DrillDownCard drillData={el}/>  
+                <span className="card-group col-md" style={this.drillStyle()} key={el.dt}>
+                  <DrillDownCard  drillData={el} /> 
                 </span>
                 
             ))

@@ -42,11 +42,11 @@ class DrillDownCard extends Component {
 
     render() { 
 
-
+ 
         const {dt_txt, main, weather} = this.props.drillData
             
         return (
-          <div className="card col-sm=12 col-md=4 col-lg=2" style={this.cardStyle()}>
+          <div className="card" style={this.cardStyle()}>
             <img
               className="card-img-top"
               style={this.imageStyle()}

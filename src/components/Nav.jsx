@@ -89,7 +89,7 @@ class Navbar extends Component {
             {this.state.selectedCity}
           </button>
           <hr/>
-          Cities in ${country}
+          <em>Cities in </em><b>{country.country}</b>
         <div id="menu" className="dropdown-menu" aria-labelledby="dropdown_coins">
         <form className="px-4 py-2">
             <input type="search" className="form-control" id="searchCity" placeholder="city. eg. London"  onChange={this.handleChange} value={this.state.searchValue}></input>
